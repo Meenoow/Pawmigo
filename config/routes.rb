@@ -6,5 +6,9 @@ Rails.application.routes.draw do
   #root "articles#index"
   root "user#index"
   resources :user
+  resources :pets
+  resources :schedules
+  resources :notes
+  resources :photos, only: [:edit, :update]
 
 end
