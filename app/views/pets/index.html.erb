@@ -10,45 +10,42 @@
 
 <%= link_to "View Notes", notes_path %>
 
-<div class="card mb-3" style="max-width: 540px;">
+<div class="card mb-3" style="max-width: 1140px;">
   <div class="row g-0">
     <div class="col-md-4">
       <div class="card-body">
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        <!-- START OF ACCORDION -->
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingOne">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                NOTES
+              </button>
+            </h2>
+            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body"><%= render 'notes/simple-note' %></div>
+              <button type="button" class="btn btn-primary">Edit Note</button>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                SHEDULE
+              </button>
+            </h2>
+            <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body"><%= render 'schedules/simple-schedule' %></div>
+              <button type="button" class="btn btn-primary">Edit Schedule</button>
+            </div>
+          </div>
+        </div>
+        <!-- END OF ACCORDION -->
       </div>
     </div>
     <div class="col-md-8">
       <div class="card-body">
         <img src="https://lh3.googleusercontent.com/p/AF1QipNcvxXF0_ovUidm0nXfqWP83k2PNYUP7zgIViZU=s1360-w1360-h1020" class="img-fluid rounded-start" alt="...">
       </div>
-    </div>
-  </div>
-</div>
-
-<div class="card text-center">
-  <div class="card-header">
-    <ul class="nav nav-tabs card-header-tabs">
-      <li class="nav-item">
-        <a class="nav-link active" aria-current="true" href="#">Active</a>
-      </li>
-      <li class="nav-item">
-        <!-- app/views/some_view.html.erb -->
-        <a href="<%= render 'notes/simple-note' %>">Notes</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled">Disabled</a>
-      </li>
-    </ul>
-  </div>
-  <div class="card-body">
-    <div class="card-body" style="width: 40rem;">
-      <img src="https://lh3.googleusercontent.com/p/AF1QipNcvxXF0_ovUidm0nXfqWP83k2PNYUP7zgIViZU=s1360-w1360-h1020" class="img-fluid rounded-start" alt="pet picture"
-      >
-      <!-- app/views/some_view.html.erb -->
-      <h1>Welcome to My Website</h1>
-      <%= render 'notes/simple-note' %>
-      <p>More content goes here...</p>
     </div>
   </div>
 </div>
