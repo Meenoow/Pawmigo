@@ -20,5 +20,6 @@
 #
 class Photo < ApplicationRecord
   belongs_to :pet
-  belongs_to :user
+  #belongs_to :user
+  belongs_to :owner, class_name: "User"
 end

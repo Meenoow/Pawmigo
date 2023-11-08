@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_11_06_191922) do
+ActiveRecord::Schema[7.0].define(version: 2023_11_08_172952) do
   create_table "notes", force: :cascade do |t|
     t.integer "pet_id", null: false
     t.text "content"
@@ -23,10 +23,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_06_191922) do
     t.string "name"
     t.string "breed"
     t.integer "user_id", null: false
-    t.integer "schedule_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["schedule_id"], name: "index_pets_on_schedule_id"
     t.index ["user_id"], name: "index_pets_on_user_id"
   end
 
@@ -63,7 +61,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_06_191922) do
   end
 
   add_foreign_key "notes", "pets"
-  add_foreign_key "pets", "schedules"
   add_foreign_key "pets", "users"
   add_foreign_key "photos", "owners"
   add_foreign_key "photos", "pets"

@@ -9,43 +9,10 @@
 <%= link_to "View Schedules", schedules_path %>
 
 <%= link_to "View Notes", notes_path %>
-
-<div class="card mb-3" style="max-width: 1140px;">
-  <div class="row g-0">
-    <div class="col-md-4">
-      <div class="card-body">
-        <!-- START OF ACCORDION -->
-        <div class="accordion accordion-flush" id="accordionFlushExample">
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="flush-headingOne">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                NOTES
-              </button>
-            </h2>
-            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-              <div class="accordion-body"><%= render 'notes/simple-note' %></div>
-              <button type="button" class="btn btn-primary">Edit Note</button>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="flush-headingTwo">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                SHEDULE
-              </button>
-            </h2>
-            <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-              <div class="accordion-body"><%= render 'schedules/simple-schedule' %></div>
-              <button type="button" class="btn btn-primary">Edit Schedule</button>
-            </div>
-          </div>
-        </div>
-        <!-- END OF ACCORDION -->
-      </div>
-    </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <img src="https://lh3.googleusercontent.com/p/AF1QipNcvxXF0_ovUidm0nXfqWP83k2PNYUP7zgIViZU=s1360-w1360-h1020" class="img-fluid rounded-start" alt="...">
-      </div>
-    </div>
+<div class="card" style="width: 18rem;">
+  <img src="https://lh3.googleusercontent.com/p/AF1QipNcvxXF0_ovUidm0nXfqWP83k2PNYUP7zgIViZU=s1360-w1360-h1020" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Pets Name</h5>
+    <a href="<%= pets_path %>" class="btn btn-primary">More Details</a>
   </div>
 </div>

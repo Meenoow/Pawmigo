@@ -4,12 +4,6 @@ class PetsController < ApplicationController
   end
 
   def show
-    if params[:id].present?
-      @pet = Pet.find(params[:id])
-      # Show the specific pet's information
-    else
-      # Display a generic "show" page
-    end
+    @pet = Pet.find(params[:id])
   end
-  
 end
