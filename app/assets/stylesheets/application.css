@@ -37,12 +37,17 @@
 /* Style the hero content */
 .hero-content {
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 20%;
+  height: 74%;
+  width: 40%;
   transform: translate(-50%, -50%);
-  padding-top: 10px;
+  padding-top: 50px;
+  border: solid red 4px;
+  background-color: red;
+  border-radius:0% 50% 60% 0% / 10% 70% 60% 45%;
+  /*border-radius:5px 30px 30px 5px;*/
   color: #fff;
-  
   text-align: center;
 }
 
