@@ -15,13 +15,20 @@
  */
 
  /* app/assets/stylesheets/application.css */
+ :root {
+  --salmon: #FD908A;
+  --slate: #334A5F;
+  --yoke: #FCD276;
+  --blue: #83D6DD;
+}
 
-.wrap {
+ .wrap {
   margin: 20px;
 }
 
 /* Style the hero banner container */
 .hero {
+  position: relative;
   height: 600px; /* You can adjust the height as needed */
   overflow: hidden; /* Hide any content that overflows the container */
 }
@@ -29,7 +36,6 @@
 /* Set the image as the background with cover */
 .hero-image {
   object-fit: cover;
-  background-position: center;
   width: 100%;
   height: 100%;
 }
@@ -37,15 +43,15 @@
 /* Style the hero content */
 .hero-content {
   position: absolute;
-  top: 45%;
+  top: 50%;
   left: 20%;
-  height: 74%;
-  width: 40%;
+  height: 60%; /* Adjust the height as needed */
+  width: 40%; /* Adjust the width as needed */
   transform: translate(-50%, -50%);
-  padding-top: 50px;
-  border: solid red 4px;
-  background-color: red;
-  border-radius:0% 50% 60% 0% / 10% 70% 60% 45%;
+  padding-top: 90px;
+  padding-right: 45px;
+  background-color: rgba(250, 145, 138, 0.818);
+  border-radius: 0% 50% 60% 0% / 10% 70% 60% 45%;
   /*border-radius:5px 30px 30px 5px;*/
   color: #fff;
   text-align: center;
@@ -58,4 +64,11 @@
 
 .hero-content p {
   font-size: 1.2rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-content {
+    width: 80%;
+  }
 }
