@@ -13,3 +13,44 @@
  *= require_tree .
  *= require_self
  */
+
+ /* app/assets/stylesheets/application.css */
+
+.wrap {
+  margin: 20px;
+}
+
+/* Style the hero banner container */
+.hero {
+  height: 600px; /* You can adjust the height as needed */
+  overflow: hidden; /* Hide any content that overflows the container */
+}
+
+/* Set the image as the background with cover */
+.hero-image {
+  object-fit: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* Style the hero content */
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  padding-top: 10px;
+  color: #fff;
+  
+  text-align: center;
+}
+
+/* Style the heading and tagline */
+.hero-content h1 {
+  font-size: 2.5rem;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+}

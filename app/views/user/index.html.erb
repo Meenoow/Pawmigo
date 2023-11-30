@@ -1,11 +1,14 @@
+<div class="wrap">
 <div>
- <h1>Hello User</h1>
+ <h1>Hello!</h1>
 </div>
 
-<ul class="list-group">
-  <li class="list-group-item"> 🦖 Pets
+<ul class="list-group col-4">
+  <li class="list-group-item d-flex align-items-center"> 🦖 Pets
+  <div class="justify-content-end">
   <button type="button" class="btn btn-primary">View all</button>
   <button type="button" class="btn btn-primary">+</button>
+  </div>
   </li>
 
   <li class="list-group-item"> ✍️ Notes
@@ -19,4 +22,5 @@
   </li>
 </ul>
 
-
+<%= link_to "Edit profile", edit_user_registration_path, class: "nav-link" %>
+</div>

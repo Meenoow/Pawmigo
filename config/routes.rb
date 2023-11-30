@@ -1,14 +1,16 @@
 Rails.application.routes.draw do
-  devise_for :users
+  #devise_for :users
+  devise_for :users, path: 'auth', path_names: { sign_in: 'login', sign_out: 'logout' }
+
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
   #root "articles#index"
-  root "user#index"
-  resources :user, only: [:edit, :update, :destroy]
-  resources :pets
+  root "pawmigo#index"
+  resources :user, only: [:index, :edit,]
+  resources :pets 
   resources :schedules
   resources :notes
   resources :photos, only: [:edit, :update]
-
+  resources :pawmigo
 end
